@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "*.html" -newer "../" -exec bash -c 'cp "$0" "../"' {} \;
+rsync -avu --include='*.html' --exclude='*' ./ ../
