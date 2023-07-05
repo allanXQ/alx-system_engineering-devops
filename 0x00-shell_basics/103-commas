@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -1pva --ignore-backups --sort=version | tr '\n' ',' | sed 's/,$/\n/'
