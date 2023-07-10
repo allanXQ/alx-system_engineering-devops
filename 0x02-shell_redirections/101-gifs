@@ -1,0 +1,2 @@
+#!/bin/bash
+shopt -s globstar nullglob; for file in **/*.gif; do [ -f "$file" ] && echo "${file%.*}"; done | sort -f | awk -F/ '{print $NF}' ORS="\n"
